@@ -1,6 +1,8 @@
 #wrapper{
 	width:620px;
 	margin:0 auto;
+	position:relative;
+	z-index:1;
 	h1{
 		width:100%;
 		font:24px/32px "Arial", Arial, Sans-Serif;
@@ -17,6 +19,10 @@
 		background:transparent none no-repeat center;
 		background-size:contain;
 		outline:0;
+		&.dragover{
+			border-color:red;
+			color:red;
+		}
 	}
 	#text{
 		border:2px solid #000;
@@ -34,10 +40,6 @@
 		font:16px/276px "Arial", Arial, Sans-Serif;
 		text-align:center;
 		float:right;
-		&.dragover{
-			border-color:red;
-			color:red;
-		}
 		&[style]{
 			font:0/0 "Arial", Arial, Sans-Serif;
 			text-indent:-9999px;
@@ -62,12 +64,29 @@
 		}
 	}
 	#download{
-		height:30px;
 		color:red;
 		border-color:red;
 		display:none;
 		&.show{
 			display:inline-block;
+		}
+	}
+	#result{
+		width:392px;
+		padding:10px 0 0;
+		display:none;
+		&.show{
+			display:inline-block;
+		}
+		p{
+			margin:0;
+			padding:0;
+			font:12px/16px "Arial", Arial, Sans-Serif;
+			display:block;
+		}
+		img{
+			width:100%;
+			display:block;
 		}
 	}
 }
