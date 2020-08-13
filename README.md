@@ -1,12 +1,12 @@
-#steg.js
+# steg.js
 
 Client-side steganography application to hide text in images
 
-##Demo
+## Demo
 
 [steg.js](http://kevinselwyn.com/steg.js)
 
-##Usage
+## Usage
 
 Include the script in your document:
 
@@ -18,11 +18,11 @@ If you are using a module loader like [RequireJS](http://requirejs.org/), requir
 
 ```js
 require(["dist/steg.min"], function (steg) {
-	
+
 });
 ```
 
-###Encoding
+### Encoding
 
 ```js
 steg.encode(img, text, callback);
@@ -32,7 +32,7 @@ steg.encode(img, text, callback);
 `text`: Secret text you would like to hide<br />
 `callback`: Function to call after encoding is done. Returns the data URI encoded image
 
-###Decoding
+### Decoding
 
 ```js
 steg.decode(img, callback);
@@ -41,7 +41,7 @@ steg.decode(img, callback);
 `img`: URL of the image you would like to decode<br />
 `callback`: Function to call after decoding is done. Returns the secret text
 
-##Explanation
+## Explanation
 
 This application works by encoding the text into the least significant bit (LSB) of every RGB color value of individual pixels in the source image. This causes color changes that are virtually imperceptible.
 
@@ -88,7 +88,6 @@ The number of pixels (in addition to the header) needed to successfully encode t
 
 So a 3kb text would require an image with 8192 pixels, or a roughly 91px<sup>2</sup> image.
 
-##Support
+## Support
 
 Works on modern browsers with support for the [Canvas API](http://caniuse.com/#feat=canvas). The demo requires further support for the [FileReader API](http://caniuse.com/#feat=filereader).
-
